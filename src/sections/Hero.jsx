@@ -7,19 +7,19 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-[#0C1017] text-white overflow-hidden select-none min-h-[500px] lg:min-h-[540px] flex items-center pt-5 pb-10 sm:py-14"
+      className="relative bg-[#0C1017] text-white overflow-hidden select-none min-h-[500px] lg:min-h-[540px] flex items-center py-10 sm:py-14"
     >
-      {/* Background Seamless Full-Fill Banner (Active on Tablet, Desktop & Laptop Split-Screen) */}
-      <div className="hidden sm:block absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Background Seamless Full-Fill Banner (Mobile, Tablet Split-Screen, Desktop) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="relative w-full h-full flex items-end justify-end">
           <img
             src={`${import.meta.env.BASE_URL}anubha-banner.png`}
             alt="Anubha - Software Developer"
-            className="w-full h-full object-cover object-[58%_center] sm:object-[60%_center] lg:object-right-bottom max-h-[560px] opacity-100"
+            className="w-full h-full object-cover object-[71%_center] sm:object-[60%_center] lg:object-right-bottom max-h-[560px] opacity-100"
           />
 
           {/* Left Edge Seamless Dark Blend: keeps text 100% readable on the left, leaves Anubha crystal-clear on the right */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-3/4 lg:w-3/5 max-w-2xl bg-gradient-to-r from-[#0C1017] via-[#0C1017]/85 to-transparent pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-full sm:w-3/4 lg:w-3/5 max-w-2xl bg-gradient-to-r from-[#0C1017] via-[#0C1017]/80 to-transparent pointer-events-none" />
 
           {/* Top Subtle Dark Fade */}
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0C1017] to-transparent pointer-events-none" />
@@ -43,23 +43,6 @@ export default function Hero() {
               LEFT: TEXT CONTENT & CTAS (Width capped to stay on left)
           ======================================================== */}
           <div className="w-full lg:w-[440px] xl:w-[480px] space-y-3.5 sm:space-y-4 text-left shrink-0 z-10">
-            {/* Dedicated Mobile Banner Card: Always prominently visible on mobile phones (< sm) */}
-            <div className="sm:hidden relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl mb-4 group bg-slate-900">
-              <img
-                src={`${import.meta.env.BASE_URL}anubha-mobile-banner.png`}
-                alt="Anubha - Software Developer"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0C1017]/80 via-transparent to-transparent pointer-events-none" />
-              
-              {/* Live Status Pill Overlay */}
-              <div className="absolute bottom-2.5 left-3 px-2.5 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-slate-700/60 text-[10px] font-mono text-amber-300 font-bold flex items-center gap-1.5 shadow-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Anubha • Software Developer</span>
-              </div>
-            </div>
-
             <div className="text-slate-400 font-mono text-xs sm:text-sm tracking-widest font-bold uppercase">
               HELLO, I'M
             </div>
