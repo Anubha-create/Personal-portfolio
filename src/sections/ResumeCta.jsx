@@ -4,16 +4,12 @@ import { personalInfo } from '../data/portfolioData';
 
 export default function ResumeCta() {
   return (
-    <section className="py-20 bg-[#080B13] relative overflow-hidden border-t border-slate-800/60">
-      {/* Ambient background glow */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section className="py-20 bg-[#F8F5EE] relative overflow-hidden border-t border-[#E5DFD1]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-[#111827] via-[#0F172A] to-[#0A0D16] border-2 border-slate-700/80 shadow-2xl text-center space-y-6">
+        <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-[#2D392B] via-[#243022] to-[#1B2319] border-2 border-[#4A5D45] shadow-2xl text-center space-y-6">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-mono font-bold tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#D4E4D0] text-xs font-mono font-bold tracking-widest uppercase shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             Curriculum Vitae & Qualifications
           </div>
 
@@ -21,8 +17,8 @@ export default function ResumeCta() {
             Let's build something meaningful<span className="text-amber-400">.</span>
           </h2>
 
-          <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Looking for an opportunity to learn, contribute, and grow as an entry-level software developer or IT professional.
+          <p className="text-[#D4DFD0] text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+            Looking for an opportunity to learn, contribute, and grow as an entry-level software developer or data engineering professional.
           </p>
 
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
@@ -37,22 +33,22 @@ export default function ResumeCta() {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm border border-slate-700 hover:border-slate-500 transition-all shadow-md group"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/25 transition-all shadow-md group"
             >
               <span>LET'S CONNECT</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
-          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-slate-400 border-t border-slate-800/80">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" /> MCA Candidate (9.12 CGPA)
+          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-[#BAC8B7] border-t border-white/10">
+            <span className="flex items-center gap-1.5 text-emerald-300 font-semibold">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> MCA Candidate (9.12 CGPA)
             </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" /> Java • Python • SQL • ML
+            <span className="flex items-center gap-1.5 text-blue-300 font-semibold">
+              <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" /> Java • Python • SQL • ML
             </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" /> Immediate Availability
+            <span className="flex items-center gap-1.5 text-orange-300 font-semibold">
+              <CheckCircle2 className="w-3.5 h-3.5 text-orange-400" /> Immediate Availability
             </span>
           </div>
 

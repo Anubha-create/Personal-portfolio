@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#080B13] border-t border-slate-800/80 py-12 relative select-none">
+    <footer className="bg-[#1B2319] border-t border-[#2E3C2B] py-12 relative select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           
@@ -20,22 +20,22 @@ export default function Footer() {
               <span className="text-amber-400">.</span>
             </div>
             <div className="text-left">
-              <div className="text-xs font-bold text-slate-200">
+              <div className="text-xs font-bold text-[#E2ECE1]">
                 Designed & built by Anubha.
               </div>
-              <div className="text-[10px] font-mono text-slate-500">
+              <div className="text-[10px] font-mono text-[#8FA58C]">
                 Software Developer • MCA Student (LPU)
               </div>
             </div>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-amber-400 transition-colors p-2 rounded-lg hover:bg-slate-900"
+              className="text-[#BACBB8] hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-white/10"
               title="LinkedIn"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -44,14 +44,14 @@ export default function Footer() {
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-amber-400 transition-colors p-2 rounded-lg hover:bg-slate-900"
+              className="text-[#BACBB8] hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-white/10"
               title="GitHub"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="text-slate-400 hover:text-amber-400 transition-colors p-2 rounded-lg hover:bg-slate-900"
+              className="text-[#BACBB8] hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-white/10"
               title="Email"
             >
               <Mail className="w-4 h-4" />
@@ -60,7 +60,7 @@ export default function Footer() {
             {/* Back to top */}
             <button
               onClick={scrollToTop}
-              className="ml-4 p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-amber-400 transition-all shadow-md group"
+              className="ml-2 p-2.5 rounded-xl bg-[#283526] hover:bg-[#344632] border border-[#3E523C] text-[#E0EBE0] hover:text-amber-400 transition-all shadow-md group"
               title="Back to Top"
             >
               <ArrowUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500 gap-2">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-[#859B82] gap-2">
           <div>
             &copy; {new Date().getFullYear()} Anubha. All rights reserved.
           </div>
