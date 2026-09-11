@@ -100,8 +100,33 @@ export const projects = [
     repo: "https://github.com/Anubha-create/FinGuide-AI.git"
   },
   {
-    id: "brainvault",
+    id: "designforge",
     number: "02",
+    isHeroProject: false,
+    title: "DesignForge",
+    tagline: "AI-Powered Low-Level Design (LLD) Practice Studio • Design. Defend. Improve.",
+    date: "Sep 2026",
+    category: "AI & Full-Stack System Design",
+    techStack: ["TypeScript", "React", "Node.js", "Express", "Prisma", "TailwindCSS", "Mermaid.js", "AI Evaluation"],
+    shortDescription: "Interactive Low-Level Design studio featuring live UML diagramming, 12-dimension architectural rubric grading, and a signature 'Break My Design' stress-testing engine.",
+    verifiedStat: "92%+ Resilience Scoring",
+    datasetInfo: "5 Real-World LLD Challenges",
+    overview: "DesignForge is an explainable engineering workstation designed to bridge the gap in software architecture interview preparation. It transforms ambiguous LLD prep into an evolutionary journey with concrete rubric evaluations and architectural diffing.",
+    problem: "Evaluating Low-Level Design (LLD) remains opaque and subjective. Candidates sketch classes without knowing if abstractions satisfy SOLID principles, and generic AI tools provide ungrounded, hallucinated grades.",
+    solution: "Engineered an explainable LLD workstation with real-time dynamic UML class diagramming, an evidence-grounded 12-dimension evaluation rubric (Coupling, Cohesion, Extensibility), Git-style architectural diffs, and the signature 'Break My Design' stress-tester.",
+    features: [
+      "Structured Low-Level Design (LLD) modeler with real-time dynamic UML class diagram rendering",
+      "Evidence-grounded 12-dimension architectural rubric grading Coupling, Cohesion, and SOLID compliance",
+      "Git-style architectural diffs tracking class additions, interface extractions, and dimensional deltas across attempts",
+      "Signature 'Break My Design' stress-testing engine calculating blast radius, interface stability, and regression risk against interview curveballs",
+      "Pre-seeded with 5 realistic interview challenges: Parking Lot, Elevator System, Vending Machine, and more"
+    ],
+    whatILearned: "Deepened mastery of enterprise Object-Oriented Design (OOD), Open/Closed Principle (OCP) stress-testing, AST/schema modeling, full-stack TypeScript architecture with React, Express, Prisma, and dynamic SVG/Mermaid visualization.",
+    repo: "https://github.com/Anubha-create/DesignForge"
+  },
+  {
+    id: "brainvault",
+    number: "03",
     isHeroProject: false,
     title: "BrainVault",
     tagline: "Student Record Management System with Role-Based Authentication",
@@ -123,7 +148,7 @@ export const projects = [
   },
   {
     id: "fake-news-classifier",
-    number: "03",
+    number: "04",
     isHeroProject: false,
     title: "Fake News Classifier",
     tagline: "NLP Machine Learning Detection System",
@@ -147,7 +172,7 @@ export const projects = [
   },
   {
     id: "campus-recruitment",
-    number: "04",
+    number: "05",
     isHeroProject: false,
     title: "Campus Recruitment & Placement Management System",
     tagline: "Centralized Placement Drive & Automated Eligibility Screening Portal",

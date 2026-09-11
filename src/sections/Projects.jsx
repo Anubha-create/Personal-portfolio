@@ -3,6 +3,7 @@ import { ArrowUpRight, Code2, Sparkles } from 'lucide-react';
 import { GithubIcon } from '../components/SocialIcons';
 import { projects } from '../data/portfolioData';
 import MockupFinGuide from '../components/MockupFinGuide';
+import MockupDesignForge from '../components/MockupDesignForge';
 import MockupBrainVault from '../components/MockupBrainVault';
 import MockupFakeNews from '../components/MockupFakeNews';
 import MockupRecruitment from '../components/MockupRecruitment';
@@ -26,6 +27,8 @@ export default function Projects({ onSelectProject }) {
     switch (projectId) {
       case 'finguide-ai':
         return <MockupFinGuide />;
+      case 'designforge':
+        return <MockupDesignForge />;
       case 'brainvault':
         return <MockupBrainVault />;
       case 'fake-news-classifier':
@@ -39,6 +42,12 @@ export default function Projects({ onSelectProject }) {
 
   const getCardAccent = (id) => {
     switch (id) {
+      case 'designforge':
+        return {
+          border: 'border-l-4 border-indigo-600',
+          badgeBg: 'bg-indigo-50 border-indigo-200 text-indigo-800',
+          btnBg: 'bg-indigo-600 hover:bg-indigo-500 text-white'
+        };
       case 'brainvault':
         return {
           border: 'border-l-4 border-blue-600',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Brain, Building2, Newspaper, TrendingUp } from 'lucide-react';
+import { ArrowRight, Brain, Building2, Newspaper, TrendingUp, Layers } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 import TechIcon from '../components/TechIcon';
 
@@ -11,6 +11,13 @@ export default function DualOverview({ onSelectProject }) {
       desc: "AI-powered investment advisor predicting stock trends using XGBoost regression and market APIs.",
       techs: ["Python", "Flask", "XGBoost", "REST APIs"],
       icon: <TrendingUp className="w-5 h-5 text-amber-500" />
+    },
+    {
+      id: "designforge",
+      title: "DesignForge",
+      desc: "AI-powered Low-Level Design studio with UML diagramming, 12D rubric & 'Break My Design' engine.",
+      techs: ["TypeScript", "React", "Node.js", "AI Engine"],
+      icon: <Layers className="w-5 h-5 text-indigo-600" />
     },
     {
       id: "brainvault",
