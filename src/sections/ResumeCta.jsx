@@ -24,8 +24,10 @@ export default function ResumeCta() {
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
             <a
               href={personalInfo.resumeUrl}
-              download
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-sm tracking-wide shadow-xl hover:shadow-amber-400/25 transition-all group"
+              download="Anubha-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-sm tracking-wide shadow-xl hover:shadow-amber-400/25 transition-all group cursor-pointer"
             >
               <Download className="w-4 h-4 text-slate-950" />
               <span>DOWNLOAD RESUME</span>

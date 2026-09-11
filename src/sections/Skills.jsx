@@ -101,13 +101,13 @@ export default function Skills() {
                         key={sIdx}
                         className="p-3 rounded-xl bg-[#FAF8F3] border border-[#E6E0D2] hover:bg-white hover:border-[#C4BBA7] hover:shadow-xs transition-all duration-200 flex items-center justify-between group/pill"
                       >
-                        <div className="flex items-center gap-2.5">
+                        <div className="flex items-center gap-2.5 min-w-0">
                           <div className="w-5 h-5 rounded flex items-center justify-center shrink-0">
                             <TechIcon name={skill.name} className="w-4 h-4" />
                           </div>
-                          <span className="font-semibold text-sm text-[#1D261C]">{skill.name}</span>
+                          <span className="font-semibold text-sm text-[#1D261C] truncate">{skill.name}</span>
                         </div>
-                        <span className="text-[10px] font-mono text-[#5A6D56] bg-white px-2 py-0.5 rounded border border-[#DDD5C5]">
+                        <span className="text-[10px] font-mono text-[#5A6D56] bg-white px-2 py-0.5 rounded border border-[#DDD5C5] shrink-0 ml-2">
                           {skill.tag}
                         </span>
                       </div>

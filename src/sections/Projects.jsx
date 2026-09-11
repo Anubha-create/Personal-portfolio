@@ -91,35 +91,35 @@ export default function Projects({ onSelectProject }) {
         </div>
 
         {/* ========================================================
-            HERO PROJECT SHOWCASE: FINGUIDE AI (Deep Olive / Marine Container)
+            HERO PROJECT SHOWCASE: FINGUIDE AI (Crisp Light Background matching other cards)
         ======================================================== */}
         {heroProject && (
           <div className="mb-20">
-            <div className="relative rounded-3xl bg-gradient-to-br from-[#223124] via-[#1C2C33] to-[#16231F] border-2 border-emerald-500/40 p-6 sm:p-10 shadow-2xl overflow-hidden group hover:border-emerald-400 transition-all duration-300">
+            <div className="relative rounded-3xl bg-white border-2 border-emerald-600 p-6 sm:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
               {/* Subtle Ambient Backlight */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-50 rounded-full blur-3xl pointer-events-none -z-0" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 
                 {/* Left Col: Project Meta & Editorial Content */}
                 <div className="lg:col-span-5 space-y-5 text-left">
                   <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs font-bold text-emerald-300 bg-emerald-500/20 px-2.5 py-1 rounded border border-emerald-400/30">
+                    <span className="font-mono text-xs font-bold text-emerald-800 bg-emerald-100/90 px-2.5 py-1 rounded border border-emerald-300">
                       FLAGSHIP / HERO PROJECT
                     </span>
-                    <span className="text-xs font-mono text-slate-300">{heroProject.date}</span>
+                    <span className="text-xs font-mono text-[#5A6C58]">{heroProject.date}</span>
                   </div>
 
                   <div>
-                    <h3 className="text-3xl sm:text-4xl font-black text-white tracking-tight group-hover:text-amber-300 transition-colors">
+                    <h3 className="text-3xl sm:text-4xl font-black text-[#1D261C] tracking-tight group-hover:text-emerald-700 transition-colors">
                       {heroProject.title}
                     </h3>
-                    <p className="text-sm font-semibold text-amber-300 mt-1">
+                    <p className="text-sm font-semibold text-emerald-700 mt-1">
                       {heroProject.tagline}
                     </p>
                   </div>
 
-                  <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                  <p className="text-[#435242] text-sm sm:text-base leading-relaxed">
                     {heroProject.shortDescription}
                   </p>
 
@@ -128,7 +128,7 @@ export default function Projects({ onSelectProject }) {
                     {heroProject.techStack.map((t, idx) => (
                       <span
                         key={idx}
-                        className="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-white/10 text-white border border-white/15"
+                        className="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-[#FAF8F3] text-[#2D392B] border border-[#E0D8CA]"
                       >
                         {t}
                       </span>
@@ -136,17 +136,17 @@ export default function Projects({ onSelectProject }) {
                   </div>
 
                   {/* Bullet Highlights from CV */}
-                  <ul className="space-y-2 pt-2 text-xs sm:text-sm text-slate-200">
+                  <ul className="space-y-2 pt-2 text-xs sm:text-sm text-[#384736]">
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" />
                       <span>XGBoost regression forecasting based on historical market trends</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" />
                       <span>Live stock prices & news ingestion via external REST APIs</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" />
                       <span>Technical indicators & volatility modeling to generate Buy / Hold / Sell signals</span>
                     </li>
                   </ul>
@@ -165,9 +165,9 @@ export default function Projects({ onSelectProject }) {
                       href={heroProject.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 transition-all flex items-center gap-2"
+                      className="px-4 py-2.5 rounded-xl bg-[#FAF8F3] hover:bg-white text-[#1D261C] font-semibold text-xs border border-[#D5CDC0] transition-all flex items-center gap-2"
                     >
-                      <GithubIcon className="w-4 h-4 text-amber-300" />
+                      <GithubIcon className="w-4 h-4 text-[#1D261C]" />
                       <span>View GitHub</span>
                     </a>
                   </div>

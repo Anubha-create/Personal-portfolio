@@ -56,21 +56,40 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-1.5 rounded-lg bg-white hover:bg-[#EAE4D6] text-[#2B3929] border border-[#DDD5C5] transition-colors shrink-0 ml-2"
+                  className="p-1.5 rounded-lg bg-white hover:bg-[#EAE4D6] text-[#2B3929] border border-[#DDD5C5] transition-colors shrink-0 ml-2 relative"
                   title="Copy email to clipboard"
                 >
                   {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
+
+              {copied && (
+                <div className="mt-2 text-center text-xs font-mono text-emerald-700 font-semibold bg-emerald-50 py-1 px-2 rounded-md border border-emerald-200 animate-fade-in">
+                  Email copied to clipboard!
+                </div>
+              )}
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#EDE7DC]">
+            <div className="mt-6 pt-4 border-t border-[#EDE7DC] space-y-2">
+              {/* Primary Direct Gmail Link */}
               <a
-                href={`mailto:${personalInfo.email}`}
-                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs tracking-wider flex items-center justify-center gap-2 transition-all shadow-md"
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${personalInfo.email}&su=Job%20Opportunity%20/%20Technical%20Discussion%20-%20Anubha`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs tracking-wider flex items-center justify-center gap-2 transition-all shadow-md group/btn"
               >
-                <span>SEND DIRECT EMAIL</span>
+                <Mail className="w-4 h-4 text-blue-200 group-hover/btn:text-white" />
+                <span>COMPOSE IN GMAIL</span>
                 <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              {/* Native Mail Client Fallback */}
+              <a
+                href={`mailto:${personalInfo.email}?subject=Job%20Opportunity%20/%20Technical%20Discussion%20-%20Anubha`}
+                className="w-full py-2 rounded-lg text-[#526350] hover:text-blue-700 text-[11px] font-mono font-medium flex items-center justify-center gap-1.5 transition-colors hover:bg-blue-50"
+              >
+                <span>Or use default mail client (mailto)</span>
+                <ExternalLink className="w-3 h-3" />
               </a>
             </div>
           </div>
@@ -99,10 +118,10 @@ export default function Contact() {
                   className="p-3 rounded-xl bg-[#FAF8F3] hover:bg-[#F2ECE0] border border-[#E5DFD1] flex items-center justify-between text-xs font-semibold text-[#1C251B] transition-all group/link"
                 >
                   <div className="flex items-center gap-2.5">
-                    <LinkedinIcon className="w-4 h-4 text-[#0A66C2]" />
-                    <span>LinkedIn / in/anubha-creates</span>
+                    <LinkedinIcon className="w-4 h-4 text-blue-600 group-hover/link:scale-110 transition-transform" />
+                    <span>LinkedIn Profile</span>
                   </div>
-                  <ExternalLink className="w-3.5 h-3.5 text-[#889986] group-hover/link:text-[#3B4D35] transition-colors" />
+                  <ExternalLink className="w-3.5 h-3.5 text-[#5A6C58]" />
                 </a>
 
                 <a
@@ -112,41 +131,47 @@ export default function Contact() {
                   className="p-3 rounded-xl bg-[#FAF8F3] hover:bg-[#F2ECE0] border border-[#E5DFD1] flex items-center justify-between text-xs font-semibold text-[#1C251B] transition-all group/link"
                 >
                   <div className="flex items-center gap-2.5">
-                    <GithubIcon className="w-4 h-4 text-[#24292E]" />
-                    <span>GitHub / Anubha-create</span>
+                    <GithubIcon className="w-4 h-4 text-[#1C251B] group-hover/link:scale-110 transition-transform" />
+                    <span>GitHub Repositories</span>
                   </div>
-                  <ExternalLink className="w-3.5 h-3.5 text-[#889986] group-hover/link:text-[#3B4D35] transition-colors" />
+                  <ExternalLink className="w-3.5 h-3.5 text-[#5A6C58]" />
                 </a>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-[#EDE7DC] flex items-center gap-2 text-xs text-[#6A7B68] font-mono">
-              <MapPin className="w-3.5 h-3.5 text-[#4D6543]" />
-              <span>{personalInfo.location}</span>
+            <div className="mt-6 pt-4 border-t border-[#EDE7DC] flex items-center justify-between text-xs font-mono text-[#5A6C58]">
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-[#4D6543]" />
+                {personalInfo.location}
+              </span>
+              <span className="font-semibold text-[#3B4D35]">Open to Relocation</span>
             </div>
           </div>
 
           {/* Card 3: Hiring & Resume Download (Warm Orange & Emerald) */}
-          <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E5DFD1] border-t-4 border-t-orange-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+          <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E5DFD1] border-t-4 border-t-amber-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 mb-6 group-hover:scale-110 transition-transform">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <div className="text-[11px] font-mono text-emerald-700 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Ready for Hire
+              <div className="text-[11px] font-mono text-amber-700 font-bold uppercase tracking-wider mb-1">
+                Immediate Opportunity
               </div>
               <h3 className="text-xl font-bold text-[#1C251B] mb-2">
-                Open to Opportunities
+                Hiring Inquiry
               </h3>
               <p className="text-xs text-[#526350] leading-relaxed mb-4">
-                Available for full-time Software Developer, Graduate Trainee, or AI/Data Intern roles across India and remote.
+                Available for full-time entry-level Software Developer or Data Engineering roles.
               </p>
 
-              <div className="p-3 rounded-xl bg-[#FAF8F3] border border-[#E5DFD1] space-y-1.5 text-xs">
+              <div className="p-3.5 rounded-xl bg-[#FAF8F3] border border-[#E5DFD1] space-y-2 text-xs">
                 <div className="flex items-center justify-between text-[#556752] font-mono">
                   <span>Target Roles:</span>
-                  <span className="text-[#1C251B] font-semibold">SWE / SDE / Data</span>
+                  <span className="text-[#1C251B] font-bold">SDE / Full-Stack / Data</span>
+                </div>
+                <div className="flex items-center justify-between text-[#556752] font-mono">
+                  <span>Notice Period:</span>
+                  <span className="text-emerald-700 font-bold">Immediate</span>
                 </div>
                 <div className="flex items-center justify-between text-[#556752] font-mono">
                   <span>Graduation:</span>
@@ -158,8 +183,10 @@ export default function Contact() {
             <div className="mt-6 pt-4 border-t border-[#EDE7DC]">
               <a
                 href={personalInfo.resumeUrl}
-                download
-                className="w-full py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs tracking-wider flex items-center justify-center gap-2 transition-all shadow-md"
+                download="Anubha-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs tracking-wider flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>DOWNLOAD FULL RESUME (PDF)</span>

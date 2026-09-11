@@ -67,8 +67,10 @@ export default function Hero() {
 
               <a
                 href={personalInfo.resumeUrl}
-                download
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-transparent hover:bg-slate-850 text-white font-semibold text-sm border border-slate-700 hover:border-slate-500 transition-all"
+                download="Anubha-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-transparent hover:bg-slate-850 text-white font-semibold text-sm border border-slate-700 hover:border-slate-500 transition-all cursor-pointer"
               >
                 <Download className="w-4 h-4 text-slate-300" />
                 <span>Download Resume</span>

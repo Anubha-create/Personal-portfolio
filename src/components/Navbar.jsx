@@ -119,7 +119,9 @@ export default function Navbar() {
           <div className="pt-3 border-t border-slate-200 flex flex-col gap-2">
             <a
               href={personalInfo.resumeUrl}
-              download
+              download="Anubha-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-2.5 rounded-xl border border-slate-300 text-slate-800 text-center font-bold text-xs flex items-center justify-center gap-2"
             >
               <FileText className="w-4 h-4 text-amber-500" />

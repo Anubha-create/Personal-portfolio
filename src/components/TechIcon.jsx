@@ -13,6 +13,19 @@ const iconMap = {
   'git': '/icons/tech/git.svg',
   'github': '/icons/tech/github.svg',
   'pandas': '/icons/tech/pandas.svg',
+  'numpy': '/icons/tech/numpy.svg',
+  'matplotlib': '/icons/tech/matplotlib.svg',
+  'seaborn': '/icons/tech/seaborn.svg',
+  'xgboost': '/icons/tech/xgboost.svg',
+  'power bi': '/icons/tech/powerbi.svg',
+  'powerbi': '/icons/tech/powerbi.svg',
+  'ibm cognos': '/icons/tech/cognos.svg',
+  'cognos': '/icons/tech/cognos.svg',
+  'sql': '/icons/tech/sql.svg',
+  'nltk': '/icons/tech/nltk.svg',
+  'eda': '/icons/tech/analytics.svg',
+  'exploratory data analysis (eda)': '/icons/tech/analytics.svg',
+  'exploratory data analysis': '/icons/tech/analytics.svg',
   'scikit-learn': '/icons/tech/scikitlearn.svg',
   'scikitlearn': '/icons/tech/scikitlearn.svg',
   'vscode': '/icons/tech/vscode.svg',
@@ -34,7 +47,11 @@ export default function TechIcon({ name, className = "w-6 h-6", alt }) {
   const rawPath = iconMap[key];
 
   if (!rawPath) {
-    return <span className="font-mono text-xs font-bold text-slate-700">{name}</span>;
+    return (
+      <span className="w-full h-full rounded bg-slate-200 text-slate-700 font-mono text-[10px] font-bold flex items-center justify-center select-none shrink-0">
+        {name ? name.charAt(0).toUpperCase() : '•'}
+      </span>
+    );
   }
 
   const cleanPath = rawPath.startsWith('/') ? rawPath.slice(1) : rawPath;
