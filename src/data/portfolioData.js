@@ -8,9 +8,9 @@ export const personalInfo = {
   email: "kumarianubha27@gmail.com",
   linkedin: "https://www.linkedin.com/in/anubha-creates",
   github: "https://github.com/Anubha-create",
-  resumeUrl: "/Anubha-Resume.pdf",
-  portrait: "/anubha-portrait.jpg",
-  formalPortrait: "/anubha-formal.jpg",
+  resumeUrl: `${import.meta.env.BASE_URL}Anubha-Resume.pdf`,
+  portrait: `${import.meta.env.BASE_URL}anubha-portrait.jpg`,
+  formalPortrait: `${import.meta.env.BASE_URL}anubha-formal.jpg`,
   summary: "Building practical software and intelligent solutions with a focus on problem solving, clean development, and continuous learning.",
   aboutText: "I am an MCA student and aspiring software developer who enjoys turning technical concepts into practical applications. My project experience spans Java-based web applications, AI/ML systems, NLP, databases, and exploratory data analysis. I approach software engineering with an analytical mindset—prioritizing clean logic, efficient database design, and intuitive user experiences."
 };

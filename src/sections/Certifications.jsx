@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { Award, CheckCircle2, Shield, Calendar, Sparkles, ExternalLink } from 'lucide-react';
+import React from 'react';
+import { Award, CheckCircle2, Calendar, ExternalLink } from 'lucide-react';
 import { certifications } from '../data/portfolioData';
 
 export default function Certifications() {
-  const [selectedCert, setSelectedCert] = useState(null);
-
   return (
     <section id="certifications" className="py-24 bg-[#0B0F19] relative border-t border-slate-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

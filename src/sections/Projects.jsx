@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, ArrowUpRight, Sparkles, Code2, Layers, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Code2, Sparkles } from 'lucide-react';
 import { GithubIcon } from '../components/SocialIcons';
 import { projects } from '../data/portfolioData';
 import MockupFinGuide from '../components/MockupFinGuide';
@@ -145,7 +145,7 @@ export default function Projects({ onSelectProject }) {
                 </div>
 
                 {/* Right Col: High-Fidelity UI Mockup */}
-                <div className="lg:col-span-7 cursor-pointer" onClick={() => setSelectedProject(heroProject)}>
+                <div className="lg:col-span-7 cursor-pointer" onClick={() => handleSelect(heroProject)}>
                   <div className="transform lg:group-hover:scale-[1.01] transition-transform duration-500">
                     {renderMockup('finguide-ai')}
                   </div>
@@ -229,7 +229,7 @@ export default function Projects({ onSelectProject }) {
                 </div>
 
                 {/* Mockup Side */}
-                <div className="lg:col-span-7 cursor-pointer" onClick={() => setSelectedProject(project)}>
+                <div className="lg:col-span-7 cursor-pointer" onClick={() => handleSelect(project)}>
                   <div className="transform group-hover:scale-[1.01] transition-transform duration-500">
                     {renderMockup(project.id)}
                   </div>

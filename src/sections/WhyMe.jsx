@@ -3,12 +3,7 @@ import { Target, Sparkles, CheckCircle2, Compass, Layers, Zap } from 'lucide-rea
 import { whyAnubhaPillars } from '../data/portfolioData';
 
 export default function WhyMe() {
-  const icons = [
-    <Target className="w-6 h-6 text-amber-400" />,
-    <Sparkles className="w-6 h-6 text-amber-400" />,
-    <Layers className="w-6 h-6 text-amber-400" />,
-    <Zap className="w-6 h-6 text-amber-400" />
-  ];
+  const iconComponents = [Target, Sparkles, Layers, Zap];
 
   return (
     <section className="py-24 bg-[#0B0F19] relative border-t border-slate-800/60">
@@ -30,16 +25,18 @@ export default function WhyMe() {
 
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {whyAnubhaPillars.map((pillar, idx) => (
-            <div
-              key={pillar.id}
-              className="p-8 rounded-3xl bg-[#111827] border border-slate-800 hover:border-amber-400/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    {icons[idx]}
-                  </div>
+          {whyAnubhaPillars.map((pillar, idx) => {
+            const IconComp = iconComponents[idx % iconComponents.length];
+            return (
+              <div
+                key={pillar.id}
+                className="p-8 rounded-3xl bg-[#111827] border border-slate-800 hover:border-amber-400/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <IconComp className="w-6 h-6 text-amber-400" />
+                    </div>
                   <span className="font-mono text-sm font-bold text-slate-500 group-hover:text-amber-400 transition-colors">
                     {pillar.id}
                   </span>
@@ -64,7 +61,8 @@ export default function WhyMe() {
                 </p>
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
 
       </div>

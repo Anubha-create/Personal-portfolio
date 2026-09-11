@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Globe, BrainCircuit, Wrench, Layers, Terminal, Sparkles } from 'lucide-react';
+import { Code2, Globe, BrainCircuit, Wrench, Layers, Sparkles } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 import TechIcon from '../components/TechIcon';
 

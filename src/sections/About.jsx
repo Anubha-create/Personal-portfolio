@@ -1,6 +1,5 @@
 import React from 'react';
-import { Database, Cpu, Layers, Sparkles, Terminal, BookOpen, CheckCircle } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { Database, Cpu, Layers, Sparkles, Terminal } from 'lucide-react';
 
 export default function About() {
   const pillars = [

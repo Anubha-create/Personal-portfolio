@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Users, UserPlus, Search, Edit3, Trash2, Shield, Database, CheckCircle2 } from 'lucide-react';
+import { UserPlus, Search, Edit3, Trash2, Shield, Database, CheckCircle2 } from 'lucide-react';
 
 export default function MockupBrainVault() {
   const [role, setRole] = useState('Admin');
-  const [records, setRecords] = useState([
+  const [records] = useState([
     { id: 'STU-101', name: 'Aarav Sharma', course: 'MCA', sem: 'Sem 2', status: 'Enrolled', gpa: '8.85' },
     { id: 'STU-102', name: 'Pooja Verma', course: 'BCA', sem: 'Sem 6', status: 'Enrolled', gpa: '9.10' },
     { id: 'STU-103', name: 'Rohan Mehra', course: 'MCA', sem: 'Sem 4', status: 'Completed', gpa: '8.40' },

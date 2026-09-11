@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Brain, Building2, Newspaper, TrendingUp, Code2, Database } from 'lucide-react';
+import { ArrowRight, Brain, Building2, Newspaper, TrendingUp } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 import TechIcon from '../components/TechIcon';
 

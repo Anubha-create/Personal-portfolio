@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, ArrowRight, FileText, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Download, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function ResumeCta() {

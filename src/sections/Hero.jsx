@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="relative w-full h-full flex items-end justify-end">
           <img
-            src="/anubha-banner.png"
+            src={`${import.meta.env.BASE_URL}anubha-banner.png`}
             alt="Anubha - Software Developer"
             className="w-full h-full object-cover object-right-bottom max-h-[560px]"
           />

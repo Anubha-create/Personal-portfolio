@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, CheckCircle2, ArrowRight, BookOpen, Lightbulb, Code } from 'lucide-react';
+import { X, ExternalLink, CheckCircle2, BookOpen, Lightbulb, Code } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 
 export default function ProjectModal({ project, onClose }) {

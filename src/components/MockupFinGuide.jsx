@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, ArrowUpRight, BarChart3, ShieldCheck, Activity, RefreshCw } from 'lucide-react';
+import { TrendingUp, BarChart3, ShieldCheck, Activity } from 'lucide-react';
 
 export default function MockupFinGuide() {
   const [activeTicker, setActiveTicker] = useState('NVDA');

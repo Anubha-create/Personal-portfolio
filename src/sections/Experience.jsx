@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, ArrowUpRight, CheckCircle2, Clock, GitBranch, Terminal } from 'lucide-react';
+import { Clock, GitBranch } from 'lucide-react';
 import { projectJourney } from '../data/portfolioData';
 
 export default function Experience() {

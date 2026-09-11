@@ -31,11 +31,14 @@ const iconMap = {
 
 export default function TechIcon({ name, className = "w-6 h-6", alt }) {
   const key = name ? name.toLowerCase().trim() : '';
-  const src = iconMap[key];
+  const rawPath = iconMap[key];
 
-  if (!src) {
+  if (!rawPath) {
     return <span className="font-mono text-xs font-bold text-slate-700">{name}</span>;
   }
+
+  const cleanPath = rawPath.startsWith('/') ? rawPath.slice(1) : rawPath;
+  const src = `${import.meta.env.BASE_URL}${cleanPath}`;
 
   return (
     <img
