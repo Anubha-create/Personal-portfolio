@@ -15,16 +15,18 @@ export default function Hero() {
           <img
             src={`${import.meta.env.BASE_URL}anubha-banner.png`}
             alt="Anubha - Software Developer"
-            className="w-full h-full object-cover object-right-bottom max-h-[560px] opacity-25 sm:opacity-50 lg:opacity-100"
+            className="w-full h-full object-cover object-[58%_center] sm:object-[60%_center] lg:object-right-bottom max-h-[560px] opacity-100"
           />
 
-          {/* Mobile Dark Overlay: Complete high-contrast dark wash on mobile screens */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0C1017] via-[#0C1017]/95 to-[#0C1017] lg:hidden pointer-events-none" />
+          {/* Left Edge Seamless Dark Blend: keeps text 100% readable on the left, leaves Anubha crystal-clear on the right */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-3/4 lg:w-3/5 max-w-2xl bg-gradient-to-r from-[#0C1017] via-[#0C1017]/85 to-transparent pointer-events-none" />
 
-          {/* Desktop Left Edge Seamless Dark Blend */}
-          <div className="hidden lg:block absolute inset-y-0 left-0 w-3/5 max-w-2xl bg-gradient-to-r from-[#0C1017] via-[#0C1017]/90 to-transparent pointer-events-none" />
           {/* Top Subtle Dark Fade */}
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0C1017] to-transparent pointer-events-none" />
+          
+          {/* Bottom Subtle Dark Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0C1017] to-transparent pointer-events-none" />
+
           {/* Right Edge subtle vignette */}
           <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[#0C1017]/30 to-transparent pointer-events-none" />
         </div>
@@ -110,6 +112,31 @@ export default function Hero() {
                 <Mail className="w-5 h-5" />
               </a>
             </div>
+
+            {/* 4 Traits on mobile & split screen (< lg): sits neatly on left, leaving right completely open for Anubha */}
+            <div className="lg:hidden pt-2 max-w-md">
+              <div className="grid grid-cols-2 gap-2">
+                <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-md text-white text-[11px] font-bold">
+                  <span className="text-amber-400 font-mono text-xs font-extrabold">&lt;/&gt;</span>
+                  <span className="tracking-wide">Problem Solver</span>
+                </div>
+
+                <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-md text-white text-[11px] font-bold">
+                  <Lightbulb className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span className="tracking-wide">Quick Learner</span>
+                </div>
+
+                <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-md text-white text-[11px] font-bold">
+                  <Users2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span className="tracking-wide">Team Player</span>
+                </div>
+
+                <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-md text-white text-[11px] font-bold">
+                  <TrendingUp className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span className="tracking-wide">Always Improving</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* ========================================================
@@ -125,34 +152,34 @@ export default function Hero() {
           </div>
 
           {/* ========================================================
-              FAR RIGHT: TRAITS & STACKED PILLS
+              FAR RIGHT: TRAITS & STACKED PILLS (Desktop only)
           ======================================================== */}
-          <div className="w-full lg:w-auto lg:ml-auto flex flex-col items-center lg:items-end space-y-4 sm:space-y-5 z-10 shrink-0 lg:translate-x-4 xl:translate-x-6 pt-2 lg:pt-0">
-            {/* 4 Trait pills: 2x2 grid on mobile, vertical stack on tablet/desktop */}
-            <div className="grid grid-cols-2 gap-2 w-full sm:flex sm:flex-col sm:space-y-2 sm:w-auto">
-              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 px-3 py-2 sm:py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-[11px] sm:text-xs font-bold hover:border-amber-400/60 transition-all">
-                <span className="text-amber-400 font-mono text-xs sm:text-sm font-extrabold">&lt;/&gt;</span>
+          <div className="hidden lg:flex flex-col items-end space-y-5 z-10 shrink-0 translate-x-4 xl:translate-x-6 pt-0 ml-auto">
+            {/* 4 Trait pills */}
+            <div className="space-y-2 w-auto">
+              <div className="flex items-center justify-start gap-2 px-3 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-xs font-bold hover:border-amber-400/60 transition-all">
+                <span className="text-amber-400 font-mono text-sm font-extrabold">&lt;/&gt;</span>
                 <span className="tracking-wide">Problem Solver</span>
               </div>
 
-              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 px-3 py-2 sm:py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-[11px] sm:text-xs font-bold hover:border-amber-400/60 transition-all">
+              <div className="flex items-center justify-start gap-2 px-3 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-xs font-bold hover:border-amber-400/60 transition-all">
                 <Lightbulb className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span className="tracking-wide">Quick Learner</span>
               </div>
 
-              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 px-3 py-2 sm:py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-[11px] sm:text-xs font-bold hover:border-amber-400/60 transition-all">
+              <div className="flex items-center justify-start gap-2 px-3 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-xs font-bold hover:border-amber-400/60 transition-all">
                 <Users2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span className="tracking-wide">Team Player</span>
               </div>
 
-              <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 px-3 py-2 sm:py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-[11px] sm:text-xs font-bold hover:border-amber-400/60 transition-all">
+              <div className="flex items-center justify-start gap-2 px-3 py-1.5 rounded-lg bg-[#090D16]/90 backdrop-blur-md border border-slate-700/80 shadow-xl text-white text-xs font-bold hover:border-amber-400/60 transition-all">
                 <TrendingUp className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span className="tracking-wide">Always Improving</span>
               </div>
             </div>
 
-            {/* 3 White pills: Desktop only overlay to avoid mobile clutter */}
-            <div className="hidden lg:block space-y-1.5 w-32 sm:w-36">
+            {/* 3 White pills: Desktop only overlay */}
+            <div className="space-y-1.5 w-32 sm:w-36">
               <div className="py-1 px-3 bg-white text-slate-900 text-xs font-black rounded-md text-center shadow-xl hover:bg-slate-50 transition-colors border border-slate-200">
                 Clean Code
               </div>
